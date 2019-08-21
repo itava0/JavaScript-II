@@ -32,9 +32,6 @@ const counterMaker = () => {
 // Example usage: const myCounter = counterMaker();
 const myCounter = counterMaker();
 console.log(myCounter()); 
-console.log(myCounter());
-console.log(myCounter());
-console.log(myCounter());
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
 // It should have a `limit` parameter. Any counters we make with `counterMaker`
