@@ -15,13 +15,18 @@ welcome();
 
 
 // ==== Challenge 2: Implement a "counter maker" function ====
-const counterMaker = () => {
+const counterMaker = (limit) => {
   // IMPLEMENTATION OF counterMaker:
   // 1- Declare a `count` variable with a value of 0. We will be mutating it, so declare it using `let`!
   let count = 0;
+
   // 2- Declare a function `counter`. It should increment and return `count`.
   function counter () {
-    return ++count;
+    if(count < limit) {
+      return ++count;
+    } else {
+      return count = 1;
+    }
   }
 
   //      NOTE: This `counter` function, being nested inside `counterMaker`,
@@ -30,7 +35,9 @@ const counterMaker = () => {
   return counter;
 };
 // Example usage: const myCounter = counterMaker();
-const myCounter = counterMaker();
+const myCounter = counterMaker(2);
+console.log(myCounter()); 
+console.log(myCounter()); 
 console.log(myCounter()); 
 
 // ==== Challenge 3: Make `counterMaker` more sophisticated ====
